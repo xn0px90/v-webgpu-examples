@@ -512,3 +512,4 @@ fn tet_color(i int) gg.Color {
 		else { gg.rgb(53, 67, 90) }
 	}
 }
+

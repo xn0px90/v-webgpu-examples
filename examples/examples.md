@@ -8,6 +8,14 @@ This repository contains visual examples that use the `xn0px90.webgpu` V module.
 v install xn0px90.webgpu
 ```
 
+## macOS note
+
+If `v run` fails with `file 'Metal' not found`, run examples with clang explicitly:
+
+```bash
+v -cc clang run examples/rotating_v_logo.v
+```
+
 ## Visual examples
 
 ## 1) Rotating V logo
@@ -92,7 +100,25 @@ Controls:
 - `R`: restart
 - `ESC`: close
 
+## 7) Flappy-style arcade game
+
+File: `examples/flappy_webgpu.v`
+
+Arcade bird-and-pipes game with score tracking, restart, and collision logic.
+
+```bash
+v run examples/flappy_webgpu.v
+```
+
+Controls:
+
+- `Space`/`Up`/`W`: flap
+- `R`: restart
+- `ESC`: close
+
 ## Notes
 
 - Import path in code is `import webgpu` (module provided by `xn0px90.webgpu`).
 - You need a native WebGPU implementation installed on your machine.
+- Run all checks with `scripts/test_examples.sh`.
+- Smoke-run all examples with `scripts/test_examples.sh --smoke --seconds 6`.

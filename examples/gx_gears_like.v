@@ -276,3 +276,4 @@ fn (a Vec2) + (b Vec2) Vec2 {
 		y: a.y + b.y
 	}
 }
+

@@ -396,3 +396,4 @@ fn fallback_cube_model() Model {
 	]
 	return Model{vertices: vertices, faces: faces}
 }
+

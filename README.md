@@ -45,3 +45,23 @@ scripts/test_examples.sh --smoke --seconds 6
 ```
 
 See [examples/examples.md](examples/examples.md) for details.
+
+## Windows Setup Fix
+
+After running `v install xn0px90.webgpu`, the module installs under 
+`xn0px90/webgpu` but examples use `import webgpu`. 
+
+**Fix** — run this in an Administrator PowerShell once:
+
+```powershell
+New-Item -ItemType SymbolicLink `
+  -Path "$env:USERPROFILE\.vmodules\webgpu" `
+  -Target "$env:USERPROFILE\.vmodules\xn0px90\webgpu"
+```
+
+Then run examples from the repo root:
+```powershell
+v run examples/rotating_v_logo.v
+```
+
+Tested on: Windows 11, V 0.5.1, NVIDIA GPU

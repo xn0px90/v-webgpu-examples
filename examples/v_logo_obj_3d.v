@@ -5,7 +5,7 @@ import math
 import net.http
 import os
 import time
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 1120
 const win_h = 760
@@ -396,4 +396,3 @@ fn fallback_cube_model() Model {
 	]
 	return Model{vertices: vertices, faces: faces}
 }
-

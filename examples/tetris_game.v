@@ -2,7 +2,7 @@ module main
 
 import gg
 import time
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 980
 const win_h = 760
@@ -512,4 +512,3 @@ fn tet_color(i int) gg.Color {
 		else { gg.rgb(53, 67, 90) }
 	}
 }
-

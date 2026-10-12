@@ -5,7 +5,7 @@ module main
 import math
 import time
 import sokol.sapp
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 960
 const win_h = 640
@@ -270,9 +270,9 @@ fn frame() {
 
 	uniforms := Uniforms{
 		angle: app.angle
-		center: [2]f32{ f32(cur_w) * 0.5, f32(cur_h) * 0.5 }
-		resolution: [2]f32{ f32(cur_w), f32(cur_h) }
-		tint: [4]f32{ 1.0, 1.0, 1.0, 1.0 }
+		center: [2]f32[f32(cur_w) * 0.5, f32(cur_h) * 0.5]
+		resolution: [2]f32[f32(cur_w), f32(cur_h)]
+		tint: [4]f32[1.0, 1.0, 1.0, 1.0]
 	}
 	webgpu.wgpuqueuewritebuffer(app.queue, app.uniform_buffer, 0, &uniforms, sizeof(Uniforms))
 }
@@ -469,9 +469,9 @@ fn (mut app App) build_resources() {
 fn (mut app App) upload_uniforms() {
 	uniforms := Uniforms{
 		angle: app.angle
-		center: [2]f32{ f32(app.surface_width) * 0.5, f32(app.surface_height) * 0.5 }
-		resolution: [2]f32{ f32(app.surface_width), f32(app.surface_height) }
-		tint: [4]f32{ 1.0, 1.0, 1.0, 1.0 }
+		center: [2]f32[f32(app.surface_width) * 0.5, f32(app.surface_height) * 0.5]
+		resolution: [2]f32[f32(app.surface_width), f32(app.surface_height)]
+		tint: [4]f32[1.0, 1.0, 1.0, 1.0]
 	}
 	webgpu.wgpuqueuewritebuffer(app.queue, app.uniform_buffer, 0, &uniforms, sizeof(Uniforms))
 }
@@ -525,4 +525,3 @@ fn add_thick_segment(mut verts []Vertex, a Vec2, b Vec2, thickness f32, color Ve
 fn (a Vec2) + (b Vec2) Vec2 {
 	return Vec2{ x: a.x + b.x, y: a.y + b.y }
 }
-		p0 := Vec2{ x: center.x + math.cos(a0) * radius, y: center.y + math.sin(a0) * radius }

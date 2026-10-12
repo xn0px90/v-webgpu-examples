@@ -2,7 +2,7 @@ module main
 
 import gg
 import time
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 960
 const win_h = 640

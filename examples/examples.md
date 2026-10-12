@@ -118,7 +118,7 @@ Controls:
 
 ## Notes
 
-- Import path in code is `import webgpu` (module provided by `xn0px90.webgpu`).
+- Import path in code is `import xn0px90.webgpu`.
 - You need a native WebGPU implementation installed on your machine.
 - Run all checks with `scripts/test_examples.sh`.
 - Smoke-run all examples with `scripts/test_examples.sh --smoke --seconds 6`.

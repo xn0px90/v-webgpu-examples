@@ -3,7 +3,7 @@ module main
 import gg
 import math
 import time
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 1200
 const win_h = 760
@@ -276,4 +276,3 @@ fn (a Vec2) + (b Vec2) Vec2 {
 		y: a.y + b.y
 	}
 }
-

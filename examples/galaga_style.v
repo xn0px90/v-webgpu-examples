@@ -3,7 +3,7 @@ module main
 import gg
 import math
 import time
-import webgpu
+import xn0px90.webgpu
 
 const win_w = 960
 const win_h = 720
@@ -520,4 +520,3 @@ fn clamp(v f32, lo f32, hi f32) f32 {
 	}
 	return v
 }
-
